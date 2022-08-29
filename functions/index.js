@@ -1,7 +1,7 @@
 import functions from "firebase-functions"
 import express from "express"
 import cors from "cors"
-import { getTasks, createTask, updateTask, deleteTask } from "src.task.js"
+import { getTasks, createTask, updateTask, deleteTask } from "../functions/src/task.js"
 
 
 const app = express()
