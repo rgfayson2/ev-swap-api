@@ -1,23 +1,18 @@
 {
-  "functions": {
-    "source": "functions"
-  },
   "hosting": {
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "api"
+      }
+    ],
     "public": "public",
-    "rewrites": [{
-      "source": "**",
-      "function": "api"
-    }],
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   },
   "emulators": {
     "hosting": {
       "host": "localhost",
-      "port": "6013"
+      "port": "4000"
     }
   }
 }
