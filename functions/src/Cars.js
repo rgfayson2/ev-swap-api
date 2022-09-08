@@ -26,7 +26,7 @@ export async function createCar(req, res) {
   await db
     .collection("cars")
     .add(newCar)
-    .then((doc) => res.status(201).send(doc.id))
+    .then((doc) => res.status(201).send({message: doc.id}))
     .catch((err) => res.status(500).send(err))
 }
 
