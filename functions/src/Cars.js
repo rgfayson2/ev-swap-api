@@ -16,12 +16,12 @@ export async function getCar(req, res) {
 
 export async function createCar(req, res) {
   const newCar = req.body
-    // if (!newCar) {
-    //   res.status(400).send({
-    //     message: 'invalid input'
-    //   })
-    //   return
-    // }
+    if (!newCar) {
+      res.status(400).send({
+        message: 'invalid input'
+      })
+      return
+    }
   const db = dbConnect()
   await db
     .collection("cars")
