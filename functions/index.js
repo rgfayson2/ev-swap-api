@@ -11,5 +11,6 @@ app.use(express.json())
 
 app.get('/cars', getCar)
 app.post('/cars', createCar)
+app.post('/user', createUser)
 
 export const api = functions.https.onRequest(app);
